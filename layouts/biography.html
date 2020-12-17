@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+  <meta name="author" content="Contentful">
+  <link rel="stylesheet" href="/style/main.css?v=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+<body>
+  <main class="l-container">
+    <h2>{{ data.fields.title  }}</h2>
+    <article class="c-article">   
+   
+      <h3>Obrazovanje</h3>
+      <div data-markdown>{{ data.fields.education }}</div>   
+    
+    </article>
+
+    <article class="c-article">   
+   
+        <h3>Radno iskustvo</h3>
+        <div data-markdown>{{ data.fields.expirience }}</div>   
+      
+      </article>
+
+  </main>
+  
+</body>
+</html>

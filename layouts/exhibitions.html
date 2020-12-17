@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+  <meta name="author" content="Contentful">
+  <link rel="stylesheet" href="/style/main.css?v=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+<body>
+  <main class="l-container">
+    {{> header}}
+    <h2>Exhibitions all</h2>
+    <ul class="c-paddedList">
+      {{#each data.entries}}
+        <li>
+          <div class="c-article c-card u-marginBottomLarge">
+           
+            <p>{{ fields.title  }}</p>
+            <img src="{{ fields.cover.fields.file.url }}" alt="">
+            <a href="painting/{{ fields.slug }}.html">Read more...</a>
+          </div>
+        </li>
+      {{/each}}
+    </ul>
+  </main>
+  {{> footer}}
+</body>
+</html>
